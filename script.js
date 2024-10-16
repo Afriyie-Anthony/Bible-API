@@ -15,9 +15,10 @@ inputVerse.addEventListener('input', () => {
   }
 
   clearTimeout(debounceTimeout);
-  debounceTimeout = setTimeout(() => {
+  debounceTimeout = setTimeout(() => {Dra
     requestUserInput(verse);
   }, 1000);
+  Loader.style.display = "block"
 })
 
 //Set preloader to none
@@ -31,7 +32,7 @@ Loader.style.display = "none"
 function requestUserInput(verse){
 
   //set the preloader to block
-  Loader.style.display = "block"
+ 
 
   //disable the button whrn is clicked
   // searchBtn.disabled =  true
