@@ -15,7 +15,7 @@ inputVerse.addEventListener('input', () => {
   }
 
   clearTimeout(debounceTimeout);
-  debounceTimeout = setTimeout(() => {Dra
+  debounceTimeout = setTimeout(() => {
     requestUserInput(verse);
   }, 1000);
   // Loader.style.display = "block"
