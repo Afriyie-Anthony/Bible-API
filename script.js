@@ -28,7 +28,7 @@ Loader.style.display = "none"
   
 
 //Create a funtion to request  user input
-function requestUserInput(){
+function requestUserInput(verse){
 
   //set the preloader to block
   Loader.style.display = "block"
