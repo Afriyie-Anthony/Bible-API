@@ -18,7 +18,7 @@ inputVerse.addEventListener('input', () => {
   debounceTimeout = setTimeout(() => {
     requestUserInput(verse);
   }, 1000);
-  // Loader.style.display = "block"
+   Loader.style.display = "block"
 })
 
 //Set preloader to none
