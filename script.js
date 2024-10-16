@@ -7,7 +7,7 @@ const Loader = document.getElementById('loader')
 let debounceTimeout;
 
 inputVerse.addEventListener('input', () => {
-  let verse = inputVerse.valu.trim();
+  let verse = inputVerse.value.trim();
   if(verse === '') {
     referenceTag.innerHTML = '';
     previewTag.innerHTML = '';
