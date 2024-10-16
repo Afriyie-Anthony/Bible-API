@@ -4,12 +4,27 @@ const referenceTag = document.getElementById('reference');
 const previewTag = document.getElementById('preview');
 const BASE_POINT = "https://bible-api.com/"
 const Loader = document.getElementById('loader')
+let debounceTimeout;
+
+inputVerse.addEventListener('input', (event) => {
+  let verse = inputVerse.valu.trim();
+  if(verse === '') {
+    referenceTag.innerHTML = '';
+    previewTag.innerHTML = '';
+    return;
+  }
+
+  clearTimeout(debounceTimeout);
+  debounceTimeout = setTimeout(() => {
+    requestUserInput(verse);
+  }, 1000);
+})
 
 //Set preloader to none
 Loader.style.display = "none"
 
 // Create an event handler for the button
-searchBtn.addEventListener('click', requestUserInput)
+// searchBtn.addEventListener('click', requestUserInput)
   
 
 //Create a funtion to request  user input
@@ -22,7 +37,7 @@ function requestUserInput(){
   searchBtn.disabled =  true
 
   //get the verse value
-  let verse = inputVerse.value;
+ 
   fetch(`${BASE_POINT}${verse}`).then(function (res){
     return res.json()
   }).then(function (data){
