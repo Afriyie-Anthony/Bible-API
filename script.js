@@ -18,7 +18,7 @@ inputVerse.addEventListener('input', () => {
   debounceTimeout = setTimeout(() => {Dra
     requestUserInput(verse);
   }, 1000);
-  Loader.style.display = "block"
+  // Loader.style.display = "block"
 })
 
 //Set preloader to none
@@ -53,8 +53,4 @@ function requestUserInput(verse){
     previewTag.innerHTML = data.text;
   })
 }
-
-
-
-
 //code metrix
