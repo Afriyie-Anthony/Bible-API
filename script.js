@@ -1,12 +1,12 @@
 const inputVerse = document.getElementById('txtVerse');
-const searchBtn = document.getElementById('class');
+//const searchBtn = document.getElementById('class');
 const referenceTag = document.getElementById('reference');
 const previewTag = document.getElementById('preview');
 const BASE_POINT = "https://bible-api.com/"
 const Loader = document.getElementById('loader')
 let debounceTimeout;
 
-inputVerse.addEventListener('input', (event) => {
+inputVerse.addEventListener('input', () => {
   let verse = inputVerse.valu.trim();
   if(verse === '') {
     referenceTag.innerHTML = '';
@@ -34,7 +34,7 @@ function requestUserInput(){
   Loader.style.display = "block"
 
   //disable the button whrn is clicked
-  searchBtn.disabled =  true
+  // searchBtn.disabled =  true
 
   //get the verse value
  
@@ -46,7 +46,7 @@ function requestUserInput(){
     Loader.style.display = "none"
 
     //set the button disabled to true
-    searchBtn.disabled =  false
+    // searchBtn.disabled =  false
 
     referenceTag.innerHTML = data.reference;
     previewTag.innerHTML = data.text;
